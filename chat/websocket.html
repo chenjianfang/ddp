@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		body{
+			background-color: #fff;
+		}
+		.wrapper{
+			position: absolute;
+			width: 720px;
+			height: 500px;
+			padding-bottom: 60px;
+			box-sizing: border-box;
+			background-color: #000;
+			color: #fff;
+			font-size: 16px;
+			font-weight: 600;
+			top:50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			-ms-transform: translate(-50%,-50%);
+			-webkit-transform: translate(-50%,-50%);
+			-moz-transform: translate(-50%,-50%);
+		}
+		.wrapper ul{
+			height: 100%;
+			overflow-y: auto;
+		}
+		form input{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 50px;
+			border:1px solid #fff;
+			background-color: rgba(0,0,0,0.7);
+			padding: 5px 10px;
+			color: #fff;
+			font-size: 18px;
+			box-sizing: border-box;
+		}
+		ul{
+			list-style: none;
+		}
+		.list-msg{
+			display: block;
+			border-bottom: 1px solid #fff;
+			padding-bottom: 5px;
+			margin: 10px 10px 0 10px;
+		}
+		.first{
+			margin-bottom: 5px;
+		}
+		.first .name{
+			font-size: 16px;
+		}
+		.first .time{
+			margin-left: 15px;
+			font-size: 12px;
+		}
+		.content{
+			font-size: 16px;
+			word-break: break-all;
+		}
+		body, ul, ol, li, p, h1, h2, h3, h4, h5{
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<ul>
+		</ul>
+		<form>
+			<input type="text" id="msg" autofocus>
+		</form>
+	</div>	
+	<script src="lib/socket.io-1.2.0.js"></script>
+	<script src="lib/jquery-3.1.0.min.js"></script>
+	<script src="./src/main.js"></script>
+</body>
+</html>

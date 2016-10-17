@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+<script>
+	(function(){
+		function GetQueryString(name)
+		{
+		     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		     var r = window.location.search.substr(1).match(reg);
+		     if(r!=null)return  unescape(r[2]); return null;
+		}
+
+
+		var filename = GetQueryString("filename");
+		var tempUser = GetQueryString("tempUser")
+
+		var iframe = document.createElement("iframe");
+		iframe.style.display = "none";
+		iframe.src = "/"+filename+"?tempUser="+tempUser+"";
+		iframe.id = "myIframe";
+		document.body.appendChild(iframe);
+
+		window.onload = function(){
+			window.close();
+		};
+
+
+	})();
+	
+</script>
+</body>
+</html>
